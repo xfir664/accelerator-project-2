@@ -8,24 +8,446 @@
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
+  <body class="page">
+      <header class="page__header header" data-test="header">
+        <button class="burger-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <img class="header__logo" src="#" alt="Логотип сайта Лайфтур" width="142" height="42">
+        <ul class="header__menu">
+          <li class="header__item">
+            <a class="header__link" href="#">Туры</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Обучение</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">О нас</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Отзывы</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Фотографии</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <a class="haeder__phone-link" href="tel:88000000000">8 800 000-00-00</a>
+      </header>
+      <main class="page__main">
+        <h1 class="visually-hidden">Главная страница сайта Lifetour</h1>
+        <section class="hero" data-test="hero">
+          <section class="hero__slide">
+            <h2>Захватывающие вершины Кавказа</h2>
+            <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+            <button class="hero__button" type="button">Смотреть тур</button>
+            <div class="hero__description-wrapper">
+              <div class="hero__description hero__description--days">6 дней/5 ночей</div>
+              <div class="hero__description hero__description--level">Высокая сложность</div>
+            </div>
+          </section>
+          <section class="hero__slide">
+            <h2>Невероятная природа Камчатки</h2>
+            <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+            <button class="hero__button" type="button">Смотреть тур</button>
+            <div class="hero__description-wrapper">
+              <div class="hero__description hero__description--days">9 дней/10 ночей</div>
+              <div class="hero__description hero__description--level">Средняя сложность</div>
+            </div>
+          </section>
+          <section class="hero__slide">
+            <h2>Магические пейзажи Алтайского Края</h2>
+            <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических  и захватывающих дух ландшафтов Алтайских гор.</p>
+            <button class="hero__button" type="button">Смотреть тур</button>
+            <div class="hero__description-wrapper">
+              <div class="hero__description hero__description--days">6 дней/5 ночей</div>
+              <div class="hero__description hero__description--level">Высокая сложность</div>
+            </div>
+          </section>
+          <ul class="hero__pagination">
+            <li class="hero__pagination-item">
+              <button class="hero__pagination-button hero__pagination-button--active"><span class="visually-hidden">Переключить слайд</span></button>
+            </li>
+            <li class="hero__pagination-item">
+              <button class="hero__pagination-button"><span class="visually-hidden">Переключить слайд</span></button>
+            </li>
+            <li class="hero__pagination-item">
+              <button class="hero__pagination-button"><span class="visually-hidden">Переключить слайд</span></button>
+            </li>
+          </ul>
+        </section>
+        <section class="tours" data-test="tours">
+          <h2 class="tours__title">Ближайшие туры</h2>
+          <div class="toggle-buttons">
+            <button class="toggle-buttons__toggle toggle-buttons__toggle--prev" type="button">
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="toggle-buttons__toggle toggle-buttons__toggle--next" type="button">
+              <span class="visually-hidden">Следующий</span>
+            </button>
+          </div>
+          <ul class="tours__list">
+            <li class="tours__item">
+              <a class="tours__link" href="#">
+                <div class="tours__link-container">
+                  <p class="tours__location">Кавказ</p>
+                  <div class="tours__durations">
+                    <p class="tours__duration tours__duration--days">4 дня</p>
+                    <p class="tours__duration tours__duration--night">3 ночи</p>
+                  </div>
+                </div>
+                <h3 class="tours__link-title">Путешествие вокруг Эльбруса</h3>
+                <div class="tours__link-wrapper">
+                  <p class="tours__link-description">
+                    <p>Сложность:</p>
+                    <p></p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Даты набора:</p>
+                    <p>12.06–19.06</p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Группа::</p>
+                    <p>до 15 чел.</p>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="tours__item">
+              <a class="tours__link" href="#">
+                <div class="tours__link-container">
+                  <p class="tours__location">Алтай</p>
+                  <div class="tours__durations">
+                    <p class="tours__duration tours__duration--days">14 дней</p>
+                    <p class="tours__duration tours__duration--night">13 ночей</p>
+                  </div>
+                </div>
+                <h3 class="tours__link-title">Путь к подножию Белухи</h3>
+                <div class="tours__link-wrapper">
+                  <p class="tours__link-description">
+                    <p>Сложность:</p>
+                    <p></p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Даты набора:</p>
+                    <p>14.06–23.06</p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Группа::</p>
+                    <p>до 25 чел.</p>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="tours__item">
+              <a class="tours__link" href="#">
+                <div class="tours__link-container">
+                  <p class="tours__location">Адыгея</p>
+                  <div class="tours__durations">
+                    <p class="tours__duration tours__duration--days">7 дней</p>
+                    <p class="tours__duration tours__duration--night">6 ночей</p>
+                  </div>
+                </div>
+                <h3 class="tours__link-title">Через Фишт к Чёрному морю и обратно</h3>
+                <div class="tours__link-wrapper">
+                  <p class="tours__link-description">
+                    <p>Сложность:</p>
+                    <p></p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Даты набора:</p>
+                    <p>15.07–19.07</p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Группа::</p>
+                    <p>до 22 чел.</p>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="tours__item">
+              <a class="tours__link" href="#">
+                <div class="tours__link-container">
+                  <p class="tours__location">Урал</p>
+                  <div class="tours__durations">
+                    <p class="tours__duration tours__duration--days">9 дней</p>
+                    <p class="tours__duration tours__duration--night">10 ночей</p>
+                  </div>
+                </div>
+                <h3 class="tours__link-title">Восхождение Манарага</h3>
+                <div class="tours__link-wrapper">
+                  <p class="tours__link-description">
+                    <p>Сложность:</p>
+                    <p></p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Даты набора:</p>
+                    <p>12.07–19.07</p>
+                  </p>
+                  <p class="tours__link-description">
+                    <p>Группа::</p>
+                    <p>до 7 чел.</p>
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <a class="tours__more-link" href="#">Показать все туры</a>
+        </section>
+        <section class="training" data-test="training">
+          <h2 class="training__title">Обучение</h2>
+          <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+          <h3 class="training__title">Наши инструкторы</h3>
+          <div class="toggle-buttons">
+            <button class="toggle-buttons__toggle toggle-buttons__toggle--prev" type="button">
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="toggle-buttons__toggle toggle-buttons__toggle--next" type="button">
+              <span class="visually-hidden">Следующий</span>
+            </button>
+          </div>
+          <ul class="training__list">
+            <li class="training__item">
+              <picture>
+                <source media="(min-width:1440px)" srcset="#" width="255" height="200">
+                <source media="(min-width:768px)" srcset="#" width="182" height="200">
+                <img srcset="#" alt="Александр Прокофьев" width="260" height="200">
+              </picture>
+              <h3>Александр Прокофьев</h3>
+              <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+            </li>
+            <li class="training__item">
+              <picture>
+                <source media="(min-width:1440px)" srcset="#" width="255" height="200">
+                <source media="(min-width:768px)" srcset="#" width="182" height="200">
+                <img srcset="#" alt="Светлана Афиногенова" width="260" height="200">
+              </picture>
+              <h3>Надежда Колесниченко</h3>
+              <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
+            </li>
+            <li class="training__item">
+              <picture>
+                <source media="(min-width:1440px)" srcset="#" width="255" height="200">
+                <source media="(min-width:768px)" srcset="#" width="182" height="200">
+                <img srcset="#" alt="Надежда Колесниченко" width="260" height="200">
+              </picture>
+              <h3>Надежда Колесниченко</h3>
+              <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+            </li>
+            <li class="training__item">
+              <picture>
+                <source media="(min-width:1440px)" srcset="#" width="255" height="200">
+                <source media="(min-width:768px)" srcset="#" width="182" height="200">
+                <img srcset="#" alt="Федор Кайгородов" width="260" height="200">
+              </picture>
+              <h3>Федор Кайгородов</h3>
+              <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+            </li>
+            <li class="training__item">
+              <picture>
+                <source media="(min-width:1440px)" srcset="#" width="255" height="200">
+                <source media="(min-width:768px)" srcset="#" width="182" height="200">
+                <img srcset="#" alt="Даниэль Васнецов" width="260" height="200">
+              </picture>
+              <h3>Даниэль Васнецов</h3>
+              <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+            </li>
+          </ul>
+          <h3 class="training__subtitle">Процесс обучения</h3>
+          <ul class="training__traning-list">
+            <li class="training__traning-item">Изучение спортивного туристского движения</li>
+            <li class="training__traning-item">Подготовка и техническое снаряжение в походах</li>
+            <li class="training__traning-item">Лекции по окружающей среде, экологии и гигиене</li>
+            <li class="training__traning-item">Разъяснение сложности горных препятствий</li>
+          </ul>
+        </section>
+        <section class="about" data-test="about">
+          <picture>
+            <source media="(min-width:1440px)" srcset="#" width="255" height="200">
+            <source media="(min-width:768px)" srcset="#" width="182" height="200">
+            <img srcset="#" alt="Александр Прокофьев" width="260" height="200">
+          </picture>
+          <h2>О нас</h2>
+          <h3>История компании</h3>
+          <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить. Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+          <h3>Наша цель</h3>
+          <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
+        </section>
+        <section class="reviews" data-test="reviews">
+          <h2 class="reviews__title">Отзывы</h2>
+          <div class="reviews__review">
+            <img src="#" alt="Фролов Александр">
+            <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места. С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+            <p class="reviews__name">Фролов Александр</p>
+            <p class="reviews__info">
+              <span class="reviews__info-age">38 лет</span>, <span class="reviews__info-city">Москва</span>+
+            </p>
+          </div>
+          <div class="reviews__review">
+            <img src="#" alt="Иван Соловьёв">
+            <p>Хороший полноценный поход  с разнообразными локациями.  В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам,  у озёр и лесных ручьёв, остатков дач конца 19 века. Было очень интересно! Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам. Всем советую этот тур.</p>
+            <p class="reviews__name">Иван Соловьёв</p>
+            <p class="reviews__info">
+              <span class="reviews__info-age">25 лет</span>, <span class="reviews__info-city">Владивосток</span>+
+            </p>
+          </div>
+          <div class="reviews__review">
+            <img src="#" alt="Евгения Баженова">
+            <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык. Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+            <p class="reviews__name">Евгения Баженова</p>
+            <p class="reviews__info">
+              <span class="reviews__info-age">23 года</span>, <span class="reviews__info-city">Кострома</span>+
+            </p>
+          </div>
+          <div class="reviews__review">
+            <img src="#" alt="Елена Пирогова">
+            <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык. Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+            <p class="reviews__name">Елена Пирогова</p>
+            <p class="reviews__info">
+              <span class="reviews__info-age">23 года</span>, <span class="reviews__info-city">Кострома</span>+
+            </p>
+          </div>
+        </section>
+        <section class="adv" data-test="adv">
+          <h2 class="adv__title">Преимущества</h2>
+          <div class="adv__list">
+            <div class="adv__item">
+              <svg>
+                <use href="#"></use>
+              </svg>
+              <h3>Безопасность</h3>
+              <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
+            </div>
+            <div class="adv__item">
+              <svg>
+                <use href="#"></use>
+              </svg>
+              <h3>Экспертиза и знания</h3>
+              <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует, что наши клиенты находятся в надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
+            </div>
+            <div class="adv__item">
+              <svg>
+                <use href="#"></use>
+              </svg>
+              <h3>Оборудование и снаряжение</h3>
+              <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
+            </div>
+            <div class="adv__item">
+              <svg>
+                <use href="#"></use>
+              </svg>
+              <h3>Индивидуальные маршруты</h3>
+              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.</p>
+            </div>
+            <div class="adv__item">
+              <svg>
+                <use href="#"></use>
+              </svg>
+              <h3>Бережное отношение к природе</h3>
+              <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.</p>
+            </div>
+          </div>
+        </section>
+        <section class="gallery">
+          <h2 class="gallery__title">Фотогалерея</h2>
+          <p>Добавляйте фото с хэштегом #лайфтур, а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+          <div class="gallery__photos">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+          </div>
+        </section>
+        <section class="form" data-test="form">
+          <h2>Остались вопросы?</h2>
+          <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
+          <form action="#" class="form__form">
+            <label for="#">
+              <input type="text" name="phone" id="phone">
+              <span>Телефон</span>
+            </label>
+            <label for="#">
+              <input type="email" name="email" id="email">
+              <span>Email</span>
+            </label>
+            <button class="form__submit-button">Отправить</button>
+          </form>
+        </section>
+        <section class="contacts">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__description">
+            <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+          </div>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">Телефон</h3>
+              <p class="contacts__item-description">+7 983 745-45-45</p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">Email</h3>
+              <p class="contacts__item-description">info@lifetour.com</p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">Адрес</h3>
+              <p class="contacts__item-description">г. Москва, пр-т Мира, д. 14, офис 101</p>
+            </li>
+          </ul>
+          <img class="contacts__map" src="#" alt="">
+        </section>
+      </main>
+      <footer class="page__foote footer">
+        <img src="#" alt="#">
+        <ul class="footer__list">
+          <li class="footer__link">
+            <a href="#">Туры</a>
+          </li>
+          <li class="footer__link">
+            <a href="#">Обучение</a>
+          </li>
+          <li class="footer__link">
+            <a href="#">О нас</a>
+          </li>
+          <li class="footer__link">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="footer__link">
+            <a href="#">Фотографии</a>
+          </li>
+          <li class="footer__link">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#"><span class="visually-hidden">vk</span></a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#"><span class="visually-hidden">ok</span></a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#"><span class="visually-hidden">reddit</span></a>
+          </li>
+        </ul>
+        <p class="footer__pilicity">Политика конфиденциальности</p>
+      </footer>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
+
+    <!-- пример использования спрайта
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
+    примеры требуемых атрибутов data-test="*" -->
+    <!--
     <div data-test="training">training</div>
     <div data-test="about">about</div>
     <div data-test="reviews">reviews</div>
     <div data-test="adv">adv</div>
     <div data-test="gallery">gallery</div>
     <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
-
-</html>
+    <div data-test="footer">footer</div> -->
