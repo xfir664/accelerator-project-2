@@ -1,0 +1,14 @@
+$font-url-light: url("./../../fonts/Montserrat-Light.woff") format("woff"), url("./../../fonts/Montserrat-Light.woff2") format("woff2");
+$font-url-regular: url("./../../fonts/Montserrat-Regular.woff") format("woff"), url("./../../fonts/Montserrat-Regular.woff2") format("woff2");
+$font-url-medium: url("./../../fonts/Montserrat-Medium.woff") format("woff"), url("./../../fonts/Montserrat-Medium.woff2") format("woff2");
+$font-url-semiBold: url("./../../fonts/Montserrat-SemiBold.woff") format("woff"), url("./../../fonts/Montserrat-SemiBold.woff2") format("woff2");
+$font-url-bold: url("./../../fonts/Montserrat-Bold.woff") format("woff"), url("./../../fonts/Montserrat-Bold.woff2") format("woff2");
+$font-url-extraBold: url("./../../fonts/Montserrat-ExtraBold.woff") format("woff"), url("./../../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+
+@include font-face ("Montserrat", 300, normal, $font-url-light);
+@include font-face ("Montserrat", 400, normal, $font-url-regular);
+@include font-face ("Montserrat", 500, normal, $font-url-medium);
+@include font-face ("Montserrat", 600, normal, $font-url-semiBold);
+@include font-face ("Montserrat", 700, normal, $font-url-bold);
+@include font-face ("Montserrat", 800, normal, $font-url-extraBold);
+

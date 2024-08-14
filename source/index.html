@@ -10,9 +10,13 @@
 
   <body class="page">
       <header class="page__header header" data-test="header">
-        <button class="burger-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <img class="header__logo" src="#" alt="Логотип сайта Лайфтур" width="142" height="42">
-        <ul class="header__menu">
+        <button class="header__burger-button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <svg class="header__logo" width="142" height="42" aria-label="Логотип">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+        <ul class="header__menu header__menu--no-js">
           <li class="header__item">
             <a class="header__link" href="#">Туры</a>
           </li>

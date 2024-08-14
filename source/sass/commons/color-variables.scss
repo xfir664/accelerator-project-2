@@ -1,0 +1,27 @@
+//Colors
+$white: #ffffff;
+$black: #000000;
+
+
+$black-2d383f: #2d383f;
+$black-0f1429: #0f1429;
+
+
+$blue-0266c1: #0266c1;
+
+
+// Gradient
+
+$gradient-base: linear-gradient(104deg, rgba($black-0f1429, 1) 0%, rgba($black-0f1429, 0) 100%);;
+$gradient-button: linear-gradient(0deg, rgba($black, 1) 62%, rgba($black, 0) 100%);
+
+// Text
+
+$text-base: $black-2d383f;
+$text-white: $white;
+
+
+// Background
+
+$background-base: $white;
+$background-secondary: $blue-0266c1;
